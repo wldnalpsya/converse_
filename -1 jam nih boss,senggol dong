@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <cmath>
@@ -68,3 +67,93 @@ void decimalToHexadecimal(int n) {
     cout << " ========================== " << endl;
     cout << "   =   = DES TO HEKDES  : " << heksa << endl;
 }
+int binaryToDecimal(string biner) {
+    int desimal = 0;
+    int base = 1;
+    int length = biner.length();
+
+    for (int i = length - 1; i >= 0; i--) {
+        if (biner[i] == '1') {
+            desimal += base;
+        }
+        base *= 2;
+    }
+
+    return desimal;
+}
+
+int octalToDecimal(string oktal) {
+    int desimal = 0;
+    int base = 1;
+    int length = oktal.length();
+
+    for (int i = length - 1; i >= 0; i--) {
+        desimal += (oktal[i] - '0') * base;
+        base *= 8;
+    }
+
+    return desimal;
+}
+
+int hexadecimalToDecimal(string heksa) {
+    int desimal = 0;
+    int base = 1;
+    int length = heksa.length();
+
+    for (int i = length - 1; i >= 0; i--) {
+        if (heksa[i] >= '0' && heksa[i] <= '9') {
+            desimal += (heksa[i] - '0') * base;
+        } else if (heksa[i] >= 'A' && heksa[i] <= 'F') {
+            desimal += (heksa[i] - 'A' + 10) * base;
+        }
+        base *= 16;
+    }
+
+    return desimal;
+}
+
+int main() {
+    int pilih ;
+    
+    	
+	system("cls");
+	
+	cout << "\t\t===========================" << endl;
+	cout << "\t\t\t HALO DER" << endl;
+	cout << "\t\t\t==========================="<< endl;
+	cout << "\t   PUNTENN YA !! " <<endl;
+	cout << "\t===========================" << endl;
+	cin.get();
+	
+	system("cls");
+	
+	cout << "       ==================       " << endl; 
+	cout << "     ====              ====     " << endl;
+	cout << "   ====                  ====   " << endl;
+	cout << "================================" << endl;
+	cout << "======                    ======" << endl;
+	cout << "====                        ====" << endl;
+	cout << "===                          ===" << endl;
+	cout << "==                            ==" << endl;
+	cout << "================================" << endl;
+	cout << "==           WELCOME          ==" << endl;
+	cout << "================================" << endl;
+	cout << "====                         ===" << endl;
+	cout << "==                            ==" << endl;
+	cout << "=                              =" << endl;
+	
+	cin.get(); 
+	
+	system("cls");
+	
+	cout << "========================================" << endl;
+    cout << "=== PILIH KONVERSI : " << endl;
+    cout << "========================================\n\n" << endl;
+    cout << "1. Desimal ke Biner, Oktal, Heksadesimal" << endl;
+    cout << "2. Biner ke Desimal, Oktal, Heksadesimal" << endl;
+    cout << "3. Oktal ke Desimal, Biner, Heksadesimal" << endl;
+    cout << "4. Heksadesimal ke Desimal, Biner, Oktal\n\n" << endl;
+    cout << "========================================" << endl;
+	cout << "== PIL : "; cin >> pilih;
+	
+	system ("cls");
