@@ -1,1 +1,70 @@
 
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+
+void decimalToBinary(int n) {
+    if (n == 0) {
+        cout << " ========================== " << endl;
+        cout << "   =   =    --  --- -- " << endl;
+        cout << " ========================== " << endl;
+        cout << "   =   = DES TO BINER  : 0" << endl;
+        return;
+    }
+
+    string biner = "";
+    while (n > 0) {
+        biner = char(n % 2 + '0') + biner;
+        n /= 2;
+    }
+    cout << " ========================== " << endl;
+    cout << "   =   =    --  --- -- " << endl;
+    cout << " ========================== " << endl;
+    cout << "   =   = DES TO BINER  : " << biner << endl;
+}
+
+void decimalToOctal(int n) {
+    if (n == 0) {
+        cout << " ========================== " << endl;
+        cout << "   =   =    --  --- -- " << endl;
+        cout << " ========================== " << endl;
+        cout << "   =   = DES TO OKTAL  : 0" << endl;
+        return;
+    }
+
+    string okt = "";
+    while (n > 0) {
+        okt = char(n % 8 + '0') + okt;
+        n /= 8;
+    }
+    cout << " ========================== " << endl;
+    cout << "   =   =    --  --- -- " << endl;
+    cout << " ========================== " << endl;
+    cout << "   =   = DES TO OKTAL  : " << okt << endl;
+}
+
+void decimalToHexadecimal(int n) {
+    if (n == 0) {
+        cout << " ========================== " << endl;
+        cout << "   =   =    --  --- -- " << endl;
+        cout << " ========================== " << endl;
+        cout << "   =   = DES TO HEKDES  : 0" << endl;
+        return;
+    }
+
+    string heksa = "";
+    while (n > 0) {
+        int has = n % 16;
+        if (has < 10)
+            heksa = char(has + '0') + heksa;
+        else
+            heksa = char(has - 10 + 'A') + heksa;
+        n /= 16;
+    }
+    cout << " ========================== " << endl;
+    cout << "   =   =    --  --- -- " << endl;
+    cout << " ========================== " << endl;
+    cout << "   =   = DES TO HEKDES  : " << heksa << endl;
+}
